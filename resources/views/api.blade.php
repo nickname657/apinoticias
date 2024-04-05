@@ -11,9 +11,8 @@
     <h1>Lista de Usuarios</h1>
 
     <ul>
-        @foreach ($usuarios as $usuario)
-            <li>{{ $usuario->nombre }}</li>
-        @endforeach
+            <h1>{{ $resultado }}</h1>
+
     </ul>
 </body>
 </html>

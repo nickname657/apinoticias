@@ -28,7 +28,6 @@ class PeriodicoController extends Controller
 
         $peridicos_id = $request->input('periodico_id');
 
-        $token = $request->input('_token');
 
 
         if ($peridicos_id === 'mostrar') {
@@ -41,7 +40,14 @@ class PeriodicoController extends Controller
             $datas = response()->json($url);
         }
         
-        ApiController::scrape($datas);
+        $datas = json_decode($datas->getContent());
+
+    $val = $datas[0];
+         $webscrap = new ApiController();
+
+         $resultado = $webscrap->scrape($val);
+
+         return view('api', ['resultado' => $resultado]);
        
     }
 

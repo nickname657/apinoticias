@@ -8,15 +8,21 @@ use Symfony\Component\BrowserKit\HttpBrowser;
 
 class ApiController extends Controller
 {
-    
-    static function scrape($url)
+    protected $browser;
+
+    public function __construct()
     {
-        $browser = new HttpBrowser();
-        $crawler = $browser->request('GET', $url);
+        $this->browser = new HttpBrowser();
+    }
+
+    public function scrape($url)
+    {
+
+        // $browser = new HttpBrowser();
+        $crawler = $this->browser->request('GET', $url);
 
         $links = $crawler->filter('h2')->filter('a')->each(function ($node) {
             return $node->text();
-            
         });
 
         return response()->json($links);
