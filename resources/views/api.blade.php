@@ -8,11 +8,10 @@
     <title>Lista de Usuarios</title>
 </head>
 <body>
-    <h1>Lista de Usuarios</h1>
+    <h1>Lista de encabezados</h1>
 
-    <ul>
-            <h1>{{ $resultado }}</h1>
-
-    </ul>
+    <div>
+    {{$resultado}}
+    <div>
 </body>
 </html>

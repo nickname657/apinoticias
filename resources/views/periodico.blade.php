@@ -7,6 +7,15 @@
 </head>
 <body>
 
+    <h1>Añadir periodico</h1>
+
+    <label for="nombre">Ingrese un nombre</label>
+    <input type="text" id="name"><br>
+    <label for="nombre">Ingrese la url</label>
+    <input type="text" id="url"><br>
+    <button type="submit">Guardar</button>
+
+    
 
     
     <h1>Redireccionar por ID</h1>

@@ -47,6 +47,8 @@ class PeriodicoController extends Controller
 
          $resultado = $webscrap->scrape($val);
 
+        
+
          return view('api', ['resultado' => $resultado]);
        
     }
